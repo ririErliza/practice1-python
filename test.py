@@ -208,8 +208,13 @@ condition2=False
 
 #----------------and------------------
 
+# and only evaluates the second argument if the first one is true
+# so if the first argument is falsy, it returns that argument --that falsy, 
+# otherwise it evaluates the second argument and return the second argument (even if it's falsy)
+
 # print(0 and 1) ## 0
-# print(1 and 0) ## 0
+print(1 and 0) ## 0
+print(1 and 2) ## 2
 # print(False and 'hey') ## False
 # print('hi' and 'hey') ## hey
 # print([] and False) ## []
