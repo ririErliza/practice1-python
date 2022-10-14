@@ -85,8 +85,8 @@ numberToInt = int(number)
 print(isinstance(numberToInt,int)) #will return True
 
 number1="test"
-numberToInt1 = int(number1)
-print(isinstance(numberToInt1,int)) #will return error
+#numberToInt1 = int(number1)
+#print(isinstance(numberToInt1,int)) #will return error
 
 
 
@@ -107,14 +107,70 @@ print(isinstance(numberToInt1,int)) #will return error
 
 #-------------------------------OPERATORS------------------------------------------
 
+# We've already seen one, that is assignment operator (=), 
+# which is used to assign a value to a variable or to assign a variable value to another variable
 
 #--------------Arithmetic Operators-----------------
 
-#--------------Comparison Operators-----------------
+1+1 #2
+2-1 #1
+2*2 #4
+4/2 #2
+4%3 #1
+4**2 #16  #exponents, four to the power of two is 16
+5//2 #2 #floor division, running down to the nearest integer
+
+#plus sign can be used to concatenate too
+print("Scamp " + "is a good dog")
+
+#plus equal
+# age1=8
+# age1+=8 # the same as age1 = age1 + 8 
+# print(age1)
+
+# age1*=3
+# print(age1)
+
 
 #--------------Comparison Operators-----------------
+a=1
+b=2
+
+# print(a==b) #False
+# print(a!=b) #True
+# print(a>b) #False
+# print(a<=b) #True
+
+
 
 #--------------Boolean Operators--------------------
+
+condition1=True
+condition2=False
+
+# print(not condition1) #False
+# print(condition1 and condition2) #False
+# print(condition1 or condition2) #True
+
+#or
+
+# print(0 or 1) ## 1
+# print(False or 'hey') ## hey
+# print('hi' or 'hey') ## hi
+# print([] or False) ## False
+# print(False or []) ## []
+
+#and
+
+print(0 and 1) ## 0
+print(1 and 0) ## 0
+print(False and 'hey') ## False
+print('hi' and 'hey') ## hey
+print([] and False) ## []
+print(False and []) ## False
+
+
+
 
 #--------------Bitwise Operators--------------------
 
