@@ -81,8 +81,8 @@ amount4=int("20") #this here is converting the string to integer
 
 #converting str to number vv (casting)
 number="23"
-numberToInt = int(number)
-print(isinstance(numberToInt,int)) #will return True
+# numberToInt = int(number)
+# print(isinstance(numberToInt,int)) #will return True
 
 number1="test"
 #numberToInt1 = int(number1)
@@ -148,9 +148,9 @@ b=2
 condition1=True
 condition2=False
 
-# print(not condition1) #False
-# print(condition1 and condition2) #False
-# print(condition1 or condition2) #True
+# print(not condition1) #False -- not means not true
+# print(condition1 and condition2) #False -- and means both have to be true
+# print(condition1 or condition2) #True -- or means either one needs to be true
 
 #or
 
@@ -158,21 +158,24 @@ condition2=False
 # print(False or 'hey') ## hey
 # print('hi' or 'hey') ## hi
 # print([] or False) ## False
+print([] or True)
 # print(False or []) ## []
+print(True or [])
 
 #and
 
-print(0 and 1) ## 0
-print(1 and 0) ## 0
-print(False and 'hey') ## False
-print('hi' and 'hey') ## hey
-print([] and False) ## []
-print(False and []) ## False
+# print(0 and 1) ## 0
+# print(1 and 0) ## 0
+# print(False and 'hey') ## False
+# print('hi' and 'hey') ## hey
+# print([] and False) ## []
+# print(False and []) ## False
 
 
 
 
 #--------------Bitwise Operators--------------------
+#very rarely uses, only specific situation
 
 #--------------is & in Operators--------------------
 
