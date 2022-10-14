@@ -149,20 +149,64 @@ condition1=True
 condition2=False
 
 # print(not condition1) #False -- not means not true
-# print(condition1 and condition2) #False -- and means both have to be true
+# print(condition1 and condition2) #False -- and means both have to be true, if one of them is false then it will return false
 # print(condition1 or condition2) #True -- or means either one needs to be true
 
-#or
+#-----------------or------------------
 
 # print(0 or 1) ## 1
+# print(1 or 0) ## 1
 # print(False or 'hey') ## hey
+# print('hey' or False) ## hey
+# print('hey' or True) ## hey
+# print(True or 'hey') ## True
 # print('hi' or 'hey') ## hi
+# print('hey' or 'hi') ## hey
 # print([] or False) ## False
-print([] or True)
+# print([] or True) ## True
 # print(False or []) ## []
-print(True or [])
+# print(True or []) ## True
 
-#and
+# print(True or False) ## True
+# print(False or True) ## True
+
+# print(False or 0) ## 0
+# print(0 or False) ## False
+# print(True or 0) ## True
+# print(0 or True) ## True
+
+#------------------------------------#
+
+# True1 or True2 -- return True1
+# True or False -- return True
+# False or True -- return True
+# False1 or False2 -- return False2
+
+#------------------------------------#
+
+#------------Falsies-----------------#
+
+# Sequences and Collections:
+# Empty lists []
+# Empty tuples ()
+# Empty dictionaries {}
+# Empty sets set()
+# Empty strings ""
+# Empty ranges range(0)
+
+# Numbers:
+# Zero of any numeric type.
+# Integer: 0
+# Float: 0.0
+# Complex: 0j
+
+# Constants:
+# None
+# False
+
+#------------------------------------#
+
+#----------------and------------------
 
 # print(0 and 1) ## 0
 # print(1 and 0) ## 0
