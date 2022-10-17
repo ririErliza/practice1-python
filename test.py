@@ -3,12 +3,12 @@
 
 #-----------------------------------variables--------------------------------------
 
-name="Kiki"
-age=33
-name1="Lilia"
-HEIGHT=153
-my_name="Riri"
-_name="Ryan"
+# name="Kiki"
+# age=33
+# name1="Lilia"
+# HEIGHT=153
+# my_name="Riri"
+# _name="Ryan"
 
 # for, if, while, import have specific meaning, therefore cant be used as variables names
 
@@ -121,7 +121,7 @@ number1="test"
 5//2 #2 #floor division, running down to the nearest integer
 
 #plus sign can be used to concatenate too
-print("Scamp " + "is a good dog")
+# print("Scamp " + "is a good dog")
 
 #plus equal
 # age1=8
@@ -213,8 +213,8 @@ condition2=False
 # otherwise it evaluates the second argument and return the second argument (even if it's falsy)
 
 # print(0 and 1) ## 0
-print(1 and 0) ## 0
-print(1 and 2) ## 2
+#cprint(1 and 0) ## 0
+#cprint(1 and 2) ## 2
 # print(False and 'hey') ## False
 # print('hi' and 'hey') ## hey
 # print([] and False) ## []
@@ -225,46 +225,285 @@ print(1 and 2) ## 2
 
 #--------------Bitwise Operators--------------------
 #very rarely uses, only specific situation
+# & performs binary AND
+# | performs binary OR
+# ^ performs a binary XOR operation
+# ~ performs a binary NOT operation
+# << shift left operation
+# >> shift right operation
+
+
+
 
 #--------------is & in Operators--------------------
 
+# is --> identity operator
+# it's used to compare two objects and returns true if both are the same objects
+
+#in --> membership operator
+# this is used to tell if a value is contained in a list or another sequence
+
+
+
+
 #--------------Ternary Operator---------------------
+
+#to quickly define a conditional
+
+#slow way:
+def is_adult(age):
+    if age<18:
+        return True
+    else:
+        return False
+
+#ternary operator
+def is_adult2(age):
+    return True if age < 18 else False
 
 
 #----------------------------------------------------------------------------------
 
 #--------------------------------Strings-------------------------------------------
 
+"Beau"
+'Beau'
+name= "Beau"
+# phrase=name+ " is my name"
+# name += " yes my name"
+
+#multiline string
+print("""Lili is
+
+33
+
+years old
+""")
+
+
+
 #--------------String Methods---------------------
+#strings method dont alter the original, it will return a new modified string
+
+print(name.lower())
+print(name)
+
+print(len(name)) #the length of the string, this will print 4
+
+print("au" in name) #using in operator to check whether certain substring exist, this will print true
+
+# print("lili".upper())  #LILI
+# print("LiLi".lower()) #lili
+# print("LiLi the woman".title()) #Lili The Woman
+# print("LiLi".islower()) #False
+
+# isalpha() --> to check if a string contains only characters and is not empty
+# isalnum() --> to check if a string contains characters or digits and is not empty
+# isdecimal() --> to check if a string contains digits and is not empty
+# lower() --> to get a lowercase version of a string
+# islower() --> to check if a string is lowercase
+# upper() --> to get a uppercase version of a string
+# isupper() --> to check if a string is uppercase
+# title() --> to get a capitalized letter of a string
+# startswith() --> to check if the string starts with a specific substring
+# endswith() --> to check if the string ends with a specific substring
+# replace() --> to replace a part of a string
+# split() --> to split a string on a specific character separator
+# strip() --> to trim the whitespace from a string
+# join() --> to append new letters to a string
+# find() --> to find the position of a substring
+
 
 #--------------Escaping Characters----------------
+#escaping is a way to add special characters into a string --> putting a backslash (\) character
+
+print("Bea\"au") # Bea"au
+print('Bea"au') # Bea"au
+print('Be\nau') # Be        #putting the next after \n at a new line
+                # au
+
 
 #--------------String Characters & Slicing--------
+#getting a specific character in a string
+
+# name= "Beau"
+
+print(name[1]) #get letter at index 1 -> e
+
+print(name[0]) #get letter at index 0 -> B
+
+print(name[-1]) #get letter at index -1 -> u  #it's from the backward but not startng from zero coz there is no negative zero
+
+print(name[1:2]) #get letter starting at index 1 and ending before index 2 --> e
+
+print(name[1:3]) # ea
+
+print(name[1:4]) # eau
+
 
 
 #----------------------------------------------------------------------------------
-
 #--------------------------------Booleans------------------------------------------
+done= True
+# done = False
+
+if done:
+    print("yes")
+else:
+    print("no")
+
+
+# number is always true, except zero 0
+# minus number, like -1 is true too
+# strings are always true, excet empty string ""
+
+#------checking-------
+
+print(type(done)==bool) #True
+
+#--------any----------
+
+book_1_read=True
+book_2_read=False
+
+# checking if any of them are True 
+read_any_book=any([book_1_read,book_2_read])
+
+# and then it's going to set this to True
+print(read_any_book) #True
+
+
+#--------all----------
+
+ingredients_purchased = True
+meal_cooked = False
+
+# this will return True only if all of the values are True
+ready_to_serve = all([ingredients_purchased, meal_cooked])
+
+print(ready_to_serve) #False
+
 
 #----------------------------------------------------------------------------------
 
 #--------------------------------Number Data Types---------------------------------
 
+# int, integer --> whole number
+# float --> any number with decimal point
+# complex number --> an extention of the familiar real number system 
+#                    in which all numbers are expressed as a sum of a real part and an imaginary part
+#                    imaginary numbers are real multiples of the imaginary unit which is the square root of negative one
+#                    often written i in mathematics or j in engineering
+#                    in python is written with a j suffix
+
+num1 = 2+3j
+print(num1.real, num1.imag) # 2.0 3.0
+
+num2 = complex(2,3)
+print(num2.real, num2.imag) # 2.0 3.0
+
 #----------------------------------------------------------------------------------
 
 #--------------------------------Built-in Functions--------------------------------
+
+# abs --> will return the absolute value of a number
+
+print(abs(5.5)) # 5.5
+
+print(abs(-5.5)) # 5.5
+
+#round --> round to the nearest integer
+
+print(round(5.5)) # 6
+print(round(5.4)) # 5
 
 #----------------------------------------------------------------------------------
 
 #--------------------------------Enums---------------------------------------------
 
+# enums are readable names that are bound to a constant value
+# to use enums we're going to import enums from the enum standard library module
+# the only way to create constants in python
+# we can use enum to create a constant and then it cant be reassign a value
+
+from enum import Enum
+
+class State(Enum):
+    INACTIVE = 0
+    ACTIVE = 1
+
+print(State.ACTIVE.value) # 1
+
+print(State['ACTIVE'].value) # 1
+
+print(State(1)) # State.ACTIVE
+
+print(State['ACTIVE']) # State.ACTIVE
+
+print(list(State)) # [<State.INACTIVE: 0>, <State.ACTIVE: 1>]
+
+print(len(State)) # 2
 #----------------------------------------------------------------------------------
 
 #--------------------------------User Input----------------------------------------
 
+# get user input by using input function
+
+# print("What is your age?")
+# age = input()
+# print("I see, Your age is " + age)
+
+# # can be written like this too
+
+# age2 = input("What is your age? ")
+# print("OK, Your age is " + age2)
+
 #----------------------------------------------------------------------------------
 
-#--------------------------------Lists--------------------------------
+#------------------------------Control Statements----------------------------------
+
+condition3 = True
+
+# if condition3 is True then it's going to run everything in the block
+
+if condition3 == True:
+    print("The condition")
+    print("was", condition3)
+
+print("outside if, this is outside the block")
+
+# elif, else if
+
+condition4=False
+name="Favio"
+
+if condition4 == True:
+    print("The condition")
+    print("was True")
+elif name=="Roger":
+    print("Hello Roger")
+elif name == "Syd":
+    print("Hello Syd")
+elif name == "Favio":
+    print("Hello Favio")
+
+
+
+
+
+#----------------------------------------------------------------------------------
+
+#--------------------------------------Lists---------------------------------------
+
+# Lists are an essential python data structure
+
+dogs = ["Rubble", "Chase", "Rocky"]
+
+something = ["Roger", 1, True, "Syd"]
+
+# using in operator
+
+print("is Beau in dogs list? it is ", "Beau" in dogs) # is Beau in dogs list? it is  False
 
 
 #----------Sorting Lists-------
