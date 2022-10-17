@@ -497,16 +497,80 @@ elif name == "Favio":
 
 # Lists are an essential python data structure
 
+
 dogs = ["Rubble", "Chase", "Rocky"]
 
-something = ["Roger", 1, True, "Syd"]
+something = ["Roger", 1, True, "Syd", 2]
 
-# using in operator
+print(dogs[1]) # Chase
+
+print(dogs[-1]) # Rocky
+
+
+#--------length of the list (more like how many items inside the list)----------
+
+print(len(dogs)) # 3
+
+print(len(something)) # 5
+
+
+
+#----------using in operator-------
+
+print("Rocky" in dogs) # True
 
 print("is Beau in dogs list? it is ", "Beau" in dogs) # is Beau in dogs list? it is  False
 
 
-#----------Sorting Lists-------
+
+#--------update item in the list-----
+
+dogs[2] = "Beau" #update item at index 2 from "Rocky" to "Beau" to the list
+
+print(dogs) # ['Rubble', 'Chase', 'Beau']
+
+
+
+#--------adding item--------
+dogs.append("Rocky")
+
+print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky']
+
+
+
+#--------combining list--------
+dogs.extend(["Skye", "Liberty"])
+
+print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky', 'Skye', 'Liberty']
+
+
+# plus equal sign work the same as extend
+
+dogs += ["Trek", "Zuma"]
+print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky', 'Skye', 'Liberty', 'Trek', 'Zuma']
+
+
+#--------remove item from list--------
+
+dogs.remove("Trek")
+print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky', 'Skye', 'Liberty', 'Zuma']
+
+# pop remove 1 item, from the last 
+print(dogs.pop()) # Zuma
+print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky', 'Skye', 'Liberty']
+
+
+
+#------------inserting item to a list-----------
+
+items = [2,4,5,6,9]
+
+items.insert(1, 3) # insert 3 at the index 1
+
+print(items) # [2, 3, 4, 5, 6, 9]
+
+
+#--------------------------Sorting Lists-------------------------
 
 #----------------------------------------------------------------------------------
 
