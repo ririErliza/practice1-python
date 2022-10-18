@@ -541,6 +541,8 @@ print(dogs) # ['Rubble', 'Chase', 'Beau']
 
 
 #--------adding item--------
+# only work to add 1 item at a time
+
 dogs.append("Rocky")
 
 print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky']
@@ -548,6 +550,8 @@ print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky']
 
 
 #--------combining list--------
+# adding more than 1 item, use combining list
+
 dogs.extend(["Skye", "Liberty"])
 
 print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky', 'Skye', 'Liberty']
