@@ -578,16 +578,69 @@ list_numbers.insert(1, 3) # insert 3 at the index 1
 print(list_numbers) # [2, 3, 4, 5, 6, 9]
 
 
-items = ["Roger", 1, "Syd", True, "Quincy", 7]
+items = ["Roger","Syd", "Quincy", "Beau", "Marybelle"]
 items.insert(2,"test")
-print(items) # ['Roger', 1, 'test', 'Syd', True, 'Quincy', 7]
+print(items) # ['Roger', 'Syd', 'test', 'Quincy', 'Beau', 'Marybelle']
+
+#------------slices-----------
+
+items[1:1] = ["Test1", "Test2"]
+print(items) #['Roger', 'Test1', 'Test2', 'Syd', 'test', 'Quincy', 'Beau', 'Marybelle']
 
 
-#--------------------------Sorting Lists-------------------------
+#-------------Sorting Lists-------------------------
+
+items.sort()
+print(items) # ['Beau', 'Marybelle', 'Quincy', 'Roger', 'Syd', 'Test1', 'Test2', 'test']
+
+#-----another example-----
+
+items2 = ["Sri","budi", "Heri", "Agus", "Rafael", "Endah","rafael"]
+
+
+# using global function sorted
+print(sorted(items2, key=str.lower)) # ['Agus', 'budi', 'Endah', 'Heri', 'Rafael', 'rafael', 'Sri']
+print(items2) # ['Sri', 'budi', 'Heri', 'Agus', 'Rafael', 'Endah', 'rafael']
+
+
+
+# using function sort()
+items2.sort()
+print(items2) # ['Agus', 'Endah', 'Heri', 'Rafael', 'Sri', 'budi', 'rafael']
+
+
+
+# # it will print the lowercase at the end of the list, solving it by adding key=str.lower
+items2.sort(key=str.lower)
+print(items2) #['Agus', 'budi', 'Endah', 'Heri', 'Rafael', 'rafael', 'Sri']
+
+
+
+# # copy a list using items[:]
+itemscopy = items2[:]
+print(itemscopy) # ['Agus', 'budi', 'Endah', 'Heri', 'Rafael', 'rafael', 'Sri']  # karena diatas items2 udah disort jd hasil copyan jg versi sort nya
+
+
+
 
 #----------------------------------------------------------------------------------
 
 #--------------------------------Tuples--------------------------------------------
+
+# Tuples are another fundamental python data structure
+# Allow us to create immutable groups of objects
+# Tuples are IMMUTABLE
+# Once Tuple is created, it cant be modified
+# CAnt add or remove items
+# Tuples are created in a way similar to lists but using parentheses instead of square brackets
+
+students = ("Rocky", "Rubble", "Zuma", "Liberty", "Everest")
+
+print(students[-1])  # Everest
+print(students.index("Rocky"))  # 0
+print(len(students))  # 5
+
+print("Everest" in students)
 
 #----------------------------------------------------------------------------------
 
