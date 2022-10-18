@@ -535,7 +535,6 @@ print("is Beau in dogs list? it is ", "Beau" in dogs) # is Beau in dogs list? it
 #--------update item in the list-----
 
 dogs[2] = "Beau" #update item at index 2 from "Rocky" to "Beau" to the list
-
 print(dogs) # ['Rubble', 'Chase', 'Beau']
 
 
@@ -544,7 +543,6 @@ print(dogs) # ['Rubble', 'Chase', 'Beau']
 # only work to add 1 item at a time
 
 dogs.append("Rocky")
-
 print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky']
 
 
@@ -553,7 +551,6 @@ print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky']
 # adding more than 1 item, use combining list
 
 dogs.extend(["Skye", "Liberty"])
-
 print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky', 'Skye', 'Liberty']
 
 
@@ -576,11 +573,14 @@ print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky', 'Skye', 'Liberty']
 
 #------------inserting item to a list-----------
 
-items = [2,4,5,6,9]
+list_numbers = [2,4,5,6,9]
+list_numbers.insert(1, 3) # insert 3 at the index 1
+print(list_numbers) # [2, 3, 4, 5, 6, 9]
 
-items.insert(1, 3) # insert 3 at the index 1
 
-print(items) # [2, 3, 4, 5, 6, 9]
+items = ["Roger", 1, "Syd", True, "Quincy", 7]
+items.insert(2,"test")
+print(items) # ['Roger', 1, 'test', 'Syd', True, 'Quincy', 7]
 
 
 #--------------------------Sorting Lists-------------------------
