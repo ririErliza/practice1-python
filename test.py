@@ -500,11 +500,20 @@ elif name == "Favio":
 
 dogs = ["Rubble", "Chase", "Rocky"]
 
-something = ["Roger", 1, True, "Syd", 2]
+something = ["Roger", 1, True, "Syd", 2, "Beau"]
 
 print(dogs[1]) # Chase
 
 print(dogs[-1]) # Rocky
+
+print(something[2:4]) # slice from index 2 til index 4 (index 4 not included)
+#                        [True, 'Syd']
+
+print(something[2:]) # slice from index 2 til the end of the list
+#                        [True, 'Syd', 2, 'Beau']
+
+print(something[:3]) # slice from beginning of the list til index 3
+#                        ['Roger', 1, True]
 
 
 #--------length of the list (more like how many items inside the list)----------
