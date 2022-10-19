@@ -660,9 +660,42 @@ students = ("Rocky", "Rubble", "Zuma", "Liberty", "Everest")
 # the value can be anything we want
 # dictionary can contain multiple key value pairs
 
-cat1 = { "name":"Sam", "age":4,  }
+cat1 = { "name":"Sam", "age":4  }
 
-print(cat1["name"])
+print(cat1["name"]) # Sam
+
+#----change the name----
+cat1["name"] = "Syd"
+print(cat1["name"]) # Syd
+
+#----GET method----
+print(cat1.get("color")) # None
+
+print(cat1.get("name")) # Syd
+
+print(cat1.get("color", "brown")) # brown  # if it cant find color in the dictionary it will return brown
+
+print(cat1)
+
+cat1 = { "name":"Sam", "age":4, "color":"green"  }
+
+print(cat1)
+
+print(cat1.get("color", "brown")) # green # if it can fin the color in the dictionary, it will return the color from dictionary
+
+#----POP method----
+print(cat1.pop("name")) # Sam  # POP will return the item we deleted from dictionary
+
+print(cat1) # {'age': 4, 'color': 'green'}
+
+#----POPITEm method----
+print(cat1.popitem()) # ('color', 'green')  # we pop the last item from dictionary
+
+print(cat1) # {'age': 4}
+
+#----checking if key is in dictionary------
+
+print("color" in cat1) # False
 
 #----------------------------------------------------------------------------------
 
