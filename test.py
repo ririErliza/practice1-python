@@ -760,8 +760,27 @@ students = ("Rocky", "Rubble", "Zuma", "Liberty", "Everest")
 def hello():
     print("Hello!")
 
-hello()
-hello()
+hello() #Hello!
+hello() #Hello!
+
+def hi(name): # putting argument here
+    print("Hi! "+ name)
+
+hi("Diana") # Hi! Diana
+hi("Arissa") # Hi! Arissa
+# hi() # TypeError: hi() missing 1 required positional argument: 'name'  # because we didnt pass any name inside
+
+def yuhuu(name="the one who cant be name"): # putting an optional argument
+    print("Yo! " + name)
+
+yuhuu("Diana") # Yo! Diana
+yuhuu("Arissa") # Yo! Arissa
+yuhuu() # Yo! the one who cant be name
+
+def annyeong(name, age):
+    print("Annyeong! " + name + ", you are " + str(age) + "years old!")
+
+annyeong("Beau",39) # Annyeong! Beau, you are 39years old!
 
 #----------------------------------------------------------------------------------
 
