@@ -697,6 +697,21 @@ print(cat1) # {'age': 4}
 
 print("color" in cat1) # False
 
+#-----print keys and values----------
+
+cat2={ "name":"Gloria", "age":3, "color":"brown"  }
+print(cat2.keys()) # dict_keys(['name', 'age', 'color'])
+
+print(list(cat2.keys())) # ['name', 'age', 'color']
+
+print(cat2.values()) # dict_values(['Gloria', 3, 'brown'])
+
+print(list(cat2.values())) # ['Gloria', 3, 'brown']
+
+print(list(cat2.items())) # [('name', 'Gloria'), ('age', 3), ('color', 'brown')]
+
+print(len(cat2))  # 3, there are 3 items inside the dictionary
+
 #----------------------------------------------------------------------------------
 
 #--------------------------------Sets----------------------------------------------
