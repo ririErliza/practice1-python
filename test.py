@@ -660,65 +660,108 @@ students = ("Rocky", "Rubble", "Zuma", "Liberty", "Everest")
 # the value can be anything we want
 # dictionary can contain multiple key value pairs
 
-cat1 = { "name":"Sam", "age":4  }
+# cat1 = { "name":"Sam", "age":4  }
 
-print(cat1["name"]) # Sam
+# print(cat1["name"]) # Sam
 
-#----change the name----
-cat1["name"] = "Syd"
-print(cat1["name"]) # Syd
+# #----change the name----
+# cat1["name"] = "Syd"
+# print(cat1["name"]) # Syd
 
-#----GET method----
-print(cat1.get("color")) # None
+# #----GET method----
+# print(cat1.get("color")) # None
 
-print(cat1.get("name")) # Syd
+# print(cat1.get("name")) # Syd
 
-print(cat1.get("color", "brown")) # brown  # if it cant find color in the dictionary it will return brown
+# print(cat1.get("color", "brown")) # brown  # if it cant find color in the dictionary it will return brown
 
-print(cat1)
+# print(cat1)
 
-cat1 = { "name":"Sam", "age":4, "color":"green"  }
+# cat1 = { "name":"Sam", "age":4, "color":"green"  }
 
-print(cat1)
+# print(cat1)
 
-print(cat1.get("color", "brown")) # green # if it can fin the color in the dictionary, it will return the color from dictionary
+# print(cat1.get("color", "brown")) # green # if it can fin the color in the dictionary, it will return the color from dictionary
 
-#----POP method----
-print(cat1.pop("name")) # Sam  # POP will return the item we deleted from dictionary
+# #----POP method----
+# print(cat1.pop("name")) # Sam  # POP will return the item we deleted from dictionary
 
-print(cat1) # {'age': 4, 'color': 'green'}
+# print(cat1) # {'age': 4, 'color': 'green'}
 
-#----POPITEm method----
-print(cat1.popitem()) # ('color', 'green')  # we pop the last item from dictionary
+# #----POPITEm method----
+# print(cat1.popitem()) # ('color', 'green')  # we pop the last item from dictionary
 
-print(cat1) # {'age': 4}
+# print(cat1) # {'age': 4}
 
-#----checking if key is in dictionary------
+# #----checking if key is in dictionary------
 
-print("color" in cat1) # False
+# print("color" in cat1) # False
 
-#-----print keys and values----------
+# #-----print keys and values----------
 
-cat2={ "name":"Gloria", "age":3, "color":"brown"  }
-print(cat2.keys()) # dict_keys(['name', 'age', 'color'])
+# cat2={ "name":"Gloria", "age":3, "color":"brown"  }
+# print(cat2.keys()) # dict_keys(['name', 'age', 'color'])
 
-print(list(cat2.keys())) # ['name', 'age', 'color']
+# print(list(cat2.keys())) # ['name', 'age', 'color']
 
-print(cat2.values()) # dict_values(['Gloria', 3, 'brown'])
+# print(cat2.values()) # dict_values(['Gloria', 3, 'brown'])
 
-print(list(cat2.values())) # ['Gloria', 3, 'brown']
+# print(list(cat2.values())) # ['Gloria', 3, 'brown']
 
-print(list(cat2.items())) # [('name', 'Gloria'), ('age', 3), ('color', 'brown')]
+# print(list(cat2.items())) # [('name', 'Gloria'), ('age', 3), ('color', 'brown')]
 
-print(len(cat2))  # 3, there are 3 items inside the dictionary
+# print(len(cat2))  # 3, there are 3 items inside the dictionary
 
-#----------------------------------------------------------------------------------
+# #--adding new item in the dictionary--
+# cat2["favorite food"] ="Meat"
+# print(cat2)  # {'name': 'Gloria', 'age': 3, 'color': 'brown', 'favorite food': 'Meat'}
 
-#--------------------------------Sets----------------------------------------------
+# #-----delete item----------
+# del cat2["color"]
+# print(cat2) # {'name': 'Gloria', 'age': 3, 'favorite food': 'Meat'}
+
+# #-----copy dictionary----------
+# cat2copy = cat2.copy()
+# print(cat2copy) # {'name': 'Gloria', 'age': 3, 'favorite food': 'Meat'}
+
+# #----------------------------------------------------------------------------------
+
+# #--------------------------------Sets----------------------------------------------
+# # another important python data structure
+# # kind of work like Tuples but they're not ordered, kind of work like dictionaries but they dont have keys
+# # Sets are MUTABLE, so we can change them
+# # Frozen Set is the IMMUTABLE set
+
+# set1 = {"Boo", "Foo", "Loo", "Roo"}
+# set2 = {"Roo"}
+# set3 = {"Noo"}
+
+# intersect = set1 & set2
+# print(intersect) # {'Roo'} set1 and set2 only have "Roo" that in common
+
+# mod = set1 | set3
+# print(mod) # {'Noo', 'Boo', 'Roo', 'Foo', 'Loo'} we get each item from both sets
+
+# mod = set1 - set2
+# print(mod) # {'Boo', 'Loo', 'Foo'} we get the differences between set1 and set2
+
+# mod = set1 > set2
+# print(mod) # is set1 greater than set2? # True
+
+# print(list(set1)) # ['Roo', 'Loo', 'Foo', 'Boo']
 
 #----------------------------------------------------------------------------------
 
 #--------------------------------Functions-----------------------------------------
+
+# function let us create a set of instructions that we can run when needed
+# indentation matter. it can be 2 or 4 spaces. as long as it is indented the same exact amount
+
+def hello():
+    print("Hello!")
+
+hello()
+hello()
 
 #----------------------------------------------------------------------------------
 
