@@ -246,352 +246,352 @@ condition2=False
 
 
 
-#--------------Ternary Operator---------------------
+# #--------------Ternary Operator---------------------
 
-#to quickly define a conditional
+# #to quickly define a conditional
 
-#slow way:
-def is_adult(age):
-    if age<18:
-        return True
-    else:
-        return False
+# #slow way:
+# def is_adult(age):
+#     if age<18:
+#         return True
+#     else:
+#         return False
 
-#ternary operator
-def is_adult2(age):
-    return True if age < 18 else False
-
-
-#----------------------------------------------------------------------------------
-
-#--------------------------------Strings-------------------------------------------
-
-"Beau"
-'Beau'
-name= "Beau"
-# phrase=name+ " is my name"
-# name += " yes my name"
-
-#multiline string
-print("""Lili is
-
-33
-
-years old
-""")
+# #ternary operator
+# def is_adult2(age):
+#     return True if age < 18 else False
 
 
+# #----------------------------------------------------------------------------------
 
-#--------------String Methods---------------------
-#strings method dont alter the original, it will return a new modified string
+# #--------------------------------Strings-------------------------------------------
 
-print(name.lower())
-print(name)
-
-print(len(name)) #the length of the string, this will print 4
-
-print("au" in name) #using in operator to check whether certain substring exist, this will print true
-
-# print("lili".upper())  #LILI
-# print("LiLi".lower()) #lili
-# print("LiLi the woman".title()) #Lili The Woman
-# print("LiLi".islower()) #False
-
-# isalpha() --> to check if a string contains only characters and is not empty
-# isalnum() --> to check if a string contains characters or digits and is not empty
-# isdecimal() --> to check if a string contains digits and is not empty
-# lower() --> to get a lowercase version of a string
-# islower() --> to check if a string is lowercase
-# upper() --> to get a uppercase version of a string
-# isupper() --> to check if a string is uppercase
-# title() --> to get a capitalized letter of a string
-# startswith() --> to check if the string starts with a specific substring
-# endswith() --> to check if the string ends with a specific substring
-# replace() --> to replace a part of a string
-# split() --> to split a string on a specific character separator
-# strip() --> to trim the whitespace from a string
-# join() --> to append new letters to a string
-# find() --> to find the position of a substring
-
-
-#--------------Escaping Characters----------------
-#escaping is a way to add special characters into a string --> putting a backslash (\) character
-
-print("Bea\"au") # Bea"au
-print('Bea"au') # Bea"au
-print('Be\nau') # Be        #putting the next after \n at a new line
-                # au
-
-
-#--------------String Characters & Slicing--------
-#getting a specific character in a string
-
+# "Beau"
+# 'Beau'
 # name= "Beau"
+# # phrase=name+ " is my name"
+# # name += " yes my name"
 
-print(name[1]) #get letter at index 1 -> e
+# #multiline string
+# print("""Lili is
 
-print(name[0]) #get letter at index 0 -> B
+# 33
 
-print(name[-1]) #get letter at index -1 -> u  #it's from the backward but not startng from zero coz there is no negative zero
+# years old
+# """)
 
-print(name[1:2]) #get letter starting at index 1 and ending before index 2 --> e
 
-print(name[1:3]) # ea
 
-print(name[1:4]) # eau
+# #--------------String Methods---------------------
+# #strings method dont alter the original, it will return a new modified string
 
+# print(name.lower())
+# print(name)
 
+# print(len(name)) #the length of the string, this will print 4
 
-#----------------------------------------------------------------------------------
-#--------------------------------Booleans------------------------------------------
-done= True
-# done = False
+# print("au" in name) #using in operator to check whether certain substring exist, this will print true
 
-if done:
-    print("yes")
-else:
-    print("no")
+# # print("lili".upper())  #LILI
+# # print("LiLi".lower()) #lili
+# # print("LiLi the woman".title()) #Lili The Woman
+# # print("LiLi".islower()) #False
 
+# # isalpha() --> to check if a string contains only characters and is not empty
+# # isalnum() --> to check if a string contains characters or digits and is not empty
+# # isdecimal() --> to check if a string contains digits and is not empty
+# # lower() --> to get a lowercase version of a string
+# # islower() --> to check if a string is lowercase
+# # upper() --> to get a uppercase version of a string
+# # isupper() --> to check if a string is uppercase
+# # title() --> to get a capitalized letter of a string
+# # startswith() --> to check if the string starts with a specific substring
+# # endswith() --> to check if the string ends with a specific substring
+# # replace() --> to replace a part of a string
+# # split() --> to split a string on a specific character separator
+# # strip() --> to trim the whitespace from a string
+# # join() --> to append new letters to a string
+# # find() --> to find the position of a substring
 
-# number is always true, except zero 0
-# minus number, like -1 is true too
-# strings are always true, excet empty string ""
 
-#------checking-------
+# #--------------Escaping Characters----------------
+# #escaping is a way to add special characters into a string --> putting a backslash (\) character
 
-print(type(done)==bool) #True
+# print("Bea\"au") # Bea"au
+# print('Bea"au') # Bea"au
+# print('Be\nau') # Be        #putting the next after \n at a new line
+#                 # au
 
-#--------any----------
 
-book_1_read=True
-book_2_read=False
+# #--------------String Characters & Slicing--------
+# #getting a specific character in a string
 
-# checking if any of them are True 
-read_any_book=any([book_1_read,book_2_read])
+# # name= "Beau"
 
-# and then it's going to set this to True
-print(read_any_book) #True
+# print(name[1]) #get letter at index 1 -> e
 
+# print(name[0]) #get letter at index 0 -> B
 
-#--------all----------
+# print(name[-1]) #get letter at index -1 -> u  #it's from the backward but not startng from zero coz there is no negative zero
 
-ingredients_purchased = True
-meal_cooked = False
+# print(name[1:2]) #get letter starting at index 1 and ending before index 2 --> e
 
-# this will return True only if all of the values are True
-ready_to_serve = all([ingredients_purchased, meal_cooked])
+# print(name[1:3]) # ea
 
-print(ready_to_serve) #False
+# print(name[1:4]) # eau
 
 
-#----------------------------------------------------------------------------------
 
-#--------------------------------Number Data Types---------------------------------
+# #----------------------------------------------------------------------------------
+# #--------------------------------Booleans------------------------------------------
+# done= True
+# # done = False
 
-# int, integer --> whole number
-# float --> any number with decimal point
-# complex number --> an extention of the familiar real number system 
-#                    in which all numbers are expressed as a sum of a real part and an imaginary part
-#                    imaginary numbers are real multiples of the imaginary unit which is the square root of negative one
-#                    often written i in mathematics or j in engineering
-#                    in python is written with a j suffix
+# if done:
+#     print("yes")
+# else:
+#     print("no")
 
-num1 = 2+3j
-print(num1.real, num1.imag) # 2.0 3.0
 
-num2 = complex(2,3)
-print(num2.real, num2.imag) # 2.0 3.0
+# # number is always true, except zero 0
+# # minus number, like -1 is true too
+# # strings are always true, excet empty string ""
 
-#----------------------------------------------------------------------------------
+# #------checking-------
 
-#--------------------------------Built-in Functions--------------------------------
+# print(type(done)==bool) #True
 
-# abs --> will return the absolute value of a number
+# #--------any----------
 
-print(abs(5.5)) # 5.5
+# book_1_read=True
+# book_2_read=False
 
-print(abs(-5.5)) # 5.5
+# # checking if any of them are True 
+# read_any_book=any([book_1_read,book_2_read])
 
-#round --> round to the nearest integer
+# # and then it's going to set this to True
+# print(read_any_book) #True
 
-print(round(5.5)) # 6
-print(round(5.4)) # 5
 
-#----------------------------------------------------------------------------------
+# #--------all----------
 
-#--------------------------------Enums---------------------------------------------
+# ingredients_purchased = True
+# meal_cooked = False
 
-# enums are readable names that are bound to a constant value
-# to use enums we're going to import enums from the enum standard library module
-# the only way to create constants in python
-# we can use enum to create a constant and then it cant be reassign a value
+# # this will return True only if all of the values are True
+# ready_to_serve = all([ingredients_purchased, meal_cooked])
 
-from enum import Enum
+# print(ready_to_serve) #False
 
-class State(Enum):
-    INACTIVE = 0
-    ACTIVE = 1
 
-print(State.ACTIVE.value) # 1
+# #----------------------------------------------------------------------------------
 
-print(State['ACTIVE'].value) # 1
+# #--------------------------------Number Data Types---------------------------------
 
-print(State(1)) # State.ACTIVE
+# # int, integer --> whole number
+# # float --> any number with decimal point
+# # complex number --> an extention of the familiar real number system 
+# #                    in which all numbers are expressed as a sum of a real part and an imaginary part
+# #                    imaginary numbers are real multiples of the imaginary unit which is the square root of negative one
+# #                    often written i in mathematics or j in engineering
+# #                    in python is written with a j suffix
 
-print(State['ACTIVE']) # State.ACTIVE
+# num1 = 2+3j
+# print(num1.real, num1.imag) # 2.0 3.0
 
-print(list(State)) # [<State.INACTIVE: 0>, <State.ACTIVE: 1>]
+# num2 = complex(2,3)
+# print(num2.real, num2.imag) # 2.0 3.0
 
-print(len(State)) # 2
-#----------------------------------------------------------------------------------
+# #----------------------------------------------------------------------------------
 
-#--------------------------------User Input----------------------------------------
+# #--------------------------------Built-in Functions--------------------------------
 
-# get user input by using input function
+# # abs --> will return the absolute value of a number
 
-# print("What is your age?")
-# age = input()
-# print("I see, Your age is " + age)
+# print(abs(5.5)) # 5.5
 
-# # can be written like this too
+# print(abs(-5.5)) # 5.5
 
-# age2 = input("What is your age? ")
-# print("OK, Your age is " + age2)
+# #round --> round to the nearest integer
 
-#----------------------------------------------------------------------------------
+# print(round(5.5)) # 6
+# print(round(5.4)) # 5
 
-#------------------------------Control Statements----------------------------------
+# #----------------------------------------------------------------------------------
 
-condition3 = True
+# #--------------------------------Enums---------------------------------------------
 
-# if condition3 is True then it's going to run everything in the block
+# # enums are readable names that are bound to a constant value
+# # to use enums we're going to import enums from the enum standard library module
+# # the only way to create constants in python
+# # we can use enum to create a constant and then it cant be reassign a value
 
-if condition3 == True:
-    print("The condition")
-    print("was", condition3)
+# from enum import Enum
 
-print("outside if, this is outside the block")
+# class State(Enum):
+#     INACTIVE = 0
+#     ACTIVE = 1
 
-# elif, else if
+# print(State.ACTIVE.value) # 1
 
-condition4=False
-name="Favio"
+# print(State['ACTIVE'].value) # 1
 
-if condition4 == True:
-    print("The condition")
-    print("was True")
-elif name=="Roger":
-    print("Hello Roger")
-elif name == "Syd":
-    print("Hello Syd")
-elif name == "Favio":
-    print("Hello Favio")
+# print(State(1)) # State.ACTIVE
 
+# print(State['ACTIVE']) # State.ACTIVE
 
+# print(list(State)) # [<State.INACTIVE: 0>, <State.ACTIVE: 1>]
 
+# print(len(State)) # 2
+# #----------------------------------------------------------------------------------
 
+# #--------------------------------User Input----------------------------------------
 
-#----------------------------------------------------------------------------------
+# # get user input by using input function
 
-#--------------------------------------Lists---------------------------------------
+# # print("What is your age?")
+# # age = input()
+# # print("I see, Your age is " + age)
 
-# Lists are an essential python data structure
+# # # can be written like this too
 
+# # age2 = input("What is your age? ")
+# # print("OK, Your age is " + age2)
 
-dogs = ["Rubble", "Chase", "Rocky"]
+# #----------------------------------------------------------------------------------
 
-something = ["Roger", 1, True, "Syd", 2, "Beau"]
+# #------------------------------Control Statements----------------------------------
 
-print(dogs[1]) # Chase
+# condition3 = True
 
-print(dogs[-1]) # Rocky
+# # if condition3 is True then it's going to run everything in the block
 
-print(something[2:4]) # slice from index 2 til index 4 (index 4 not included)
-#                        [True, 'Syd']
+# if condition3 == True:
+#     print("The condition")
+#     print("was", condition3)
 
-print(something[2:]) # slice from index 2 til the end of the list
-#                        [True, 'Syd', 2, 'Beau']
+# print("outside if, this is outside the block")
 
-print(something[:3]) # slice from beginning of the list til index 3
-#                        ['Roger', 1, True]
+# # elif, else if
 
+# condition4=False
+# name="Favio"
 
-#--------length of the list (more like how many items inside the list)----------
+# if condition4 == True:
+#     print("The condition")
+#     print("was True")
+# elif name=="Roger":
+#     print("Hello Roger")
+# elif name == "Syd":
+#     print("Hello Syd")
+# elif name == "Favio":
+#     print("Hello Favio")
 
-print(len(dogs)) # 3
 
-print(len(something)) # 5
+
+
+
+# #----------------------------------------------------------------------------------
+
+# #--------------------------------------Lists---------------------------------------
+
+# # Lists are an essential python data structure
+
+
+# dogs = ["Rubble", "Chase", "Rocky"]
+
+# something = ["Roger", 1, True, "Syd", 2, "Beau"]
+
+# print(dogs[1]) # Chase
+
+# print(dogs[-1]) # Rocky
+
+# print(something[2:4]) # slice from index 2 til index 4 (index 4 not included)
+# #                        [True, 'Syd']
+
+# print(something[2:]) # slice from index 2 til the end of the list
+# #                        [True, 'Syd', 2, 'Beau']
+
+# print(something[:3]) # slice from beginning of the list til index 3
+# #                        ['Roger', 1, True]
+
+
+# #--------length of the list (more like how many items inside the list)----------
+
+# print(len(dogs)) # 3
+
+# print(len(something)) # 5
 
 
 
 #----------using in operator-------
 
-print("Rocky" in dogs) # True
+# print("Rocky" in dogs) # True
 
-print("is Beau in dogs list? it is ", "Beau" in dogs) # is Beau in dogs list? it is  False
+# print("is Beau in dogs list? it is ", "Beau" in dogs) # is Beau in dogs list? it is  False
 
 
 
 #--------update item in the list-----
 
-dogs[2] = "Beau" #update item at index 2 from "Rocky" to "Beau" to the list
-print(dogs) # ['Rubble', 'Chase', 'Beau']
+# dogs[2] = "Beau" #update item at index 2 from "Rocky" to "Beau" to the list
+# print(dogs) # ['Rubble', 'Chase', 'Beau']
 
 
 
 #--------adding item--------
 # only work to add 1 item at a time
 
-dogs.append("Rocky")
-print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky']
+# dogs.append("Rocky")
+# print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky']
 
 
 
 #--------combining list--------
 # adding more than 1 item, use combining list
 
-dogs.extend(["Skye", "Liberty"])
-print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky', 'Skye', 'Liberty']
+# dogs.extend(["Skye", "Liberty"])
+# print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky', 'Skye', 'Liberty']
 
 
 # plus equal sign work the same as extend
 
-dogs += ["Trek", "Zuma"]
-print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky', 'Skye', 'Liberty', 'Trek', 'Zuma']
+# dogs += ["Trek", "Zuma"]
+# print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky', 'Skye', 'Liberty', 'Trek', 'Zuma']
 
 
 #--------remove item from list--------
 
-dogs.remove("Trek")
-print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky', 'Skye', 'Liberty', 'Zuma']
+# dogs.remove("Trek")
+# print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky', 'Skye', 'Liberty', 'Zuma']
 
 # pop remove 1 item, from the last 
-print(dogs.pop()) # Zuma
-print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky', 'Skye', 'Liberty']
+# print(dogs.pop()) # Zuma
+# print(dogs) # ['Rubble', 'Chase', 'Beau', 'Rocky', 'Skye', 'Liberty']
 
 
 
 #------------inserting item to a list-----------
 
-list_numbers = [2,4,5,6,9]
-list_numbers.insert(1, 3) # insert 3 at the index 1
-print(list_numbers) # [2, 3, 4, 5, 6, 9]
+# list_numbers = [2,4,5,6,9]
+# list_numbers.insert(1, 3) # insert 3 at the index 1
+# print(list_numbers) # [2, 3, 4, 5, 6, 9]
 
 
-items = ["Roger","Syd", "Quincy", "Beau", "Marybelle"]
-items.insert(2,"test")
-print(items) # ['Roger', 'Syd', 'test', 'Quincy', 'Beau', 'Marybelle']
+# items = ["Roger","Syd", "Quincy", "Beau", "Marybelle"]
+# items.insert(2,"test")
+# print(items) # ['Roger', 'Syd', 'test', 'Quincy', 'Beau', 'Marybelle']
 
 #------------slices-----------
 
-items[1:1] = ["Test1", "Test2"]
-print(items) #['Roger', 'Test1', 'Test2', 'Syd', 'test', 'Quincy', 'Beau', 'Marybelle']
+# items[1:1] = ["Test1", "Test2"]
+# print(items) #['Roger', 'Test1', 'Test2', 'Syd', 'test', 'Quincy', 'Beau', 'Marybelle']
 
 
 #-------------Sorting Lists-------------------------
 
-items.sort()
-print(items) # ['Beau', 'Marybelle', 'Quincy', 'Roger', 'Syd', 'Test1', 'Test2', 'test']
+# items.sort()
+# print(items) # ['Beau', 'Marybelle', 'Quincy', 'Roger', 'Syd', 'Test1', 'Test2', 'test']
 
 #-----another example-----
 
@@ -599,26 +599,26 @@ items2 = ["Sri","budi", "Heri", "Agus", "Rafael", "Endah","rafael"]
 
 
 # using global function sorted
-print(sorted(items2, key=str.lower)) # ['Agus', 'budi', 'Endah', 'Heri', 'Rafael', 'rafael', 'Sri']
-print(items2) # ['Sri', 'budi', 'Heri', 'Agus', 'Rafael', 'Endah', 'rafael']
+# print(sorted(items2, key=str.lower)) # ['Agus', 'budi', 'Endah', 'Heri', 'Rafael', 'rafael', 'Sri']
+# print(items2) # ['Sri', 'budi', 'Heri', 'Agus', 'Rafael', 'Endah', 'rafael']
 
 
 
 # using function sort()
-items2.sort()
-print(items2) # ['Agus', 'Endah', 'Heri', 'Rafael', 'Sri', 'budi', 'rafael']
+# items2.sort()
+# print(items2) # ['Agus', 'Endah', 'Heri', 'Rafael', 'Sri', 'budi', 'rafael']
 
 
 
 # # it will print the lowercase at the end of the list, solving it by adding key=str.lower
-items2.sort(key=str.lower)
-print(items2) #['Agus', 'budi', 'Endah', 'Heri', 'Rafael', 'rafael', 'Sri']
+# items2.sort(key=str.lower)
+# print(items2) #['Agus', 'budi', 'Endah', 'Heri', 'Rafael', 'rafael', 'Sri']
 
 
 
 # # copy a list using items[:]
-itemscopy = items2[:]
-print(itemscopy) # ['Agus', 'budi', 'Endah', 'Heri', 'Rafael', 'rafael', 'Sri']  # karena diatas items2 udah disort jd hasil copyan jg versi sort nya
+# itemscopy = items2[:]
+# print(itemscopy) # ['Agus', 'budi', 'Endah', 'Heri', 'Rafael', 'rafael', 'Sri']  # karena diatas items2 udah disort jd hasil copyan jg versi sort nya
 
 
 
@@ -636,15 +636,33 @@ print(itemscopy) # ['Agus', 'budi', 'Endah', 'Heri', 'Rafael', 'rafael', 'Sri'] 
 
 students = ("Rocky", "Rubble", "Zuma", "Liberty", "Everest")
 
-print(students[-1])  # Everest
-print(students.index("Rocky"))  # 0
-print(len(students))  # 5
+# print(students[-1])  # Everest
 
-print("Everest" in students)
+# print(students.index("Rocky"))  # 0
+
+# print(len(students))  # 5
+
+# print("Everest" in students) # True
+
+# print(sorted(students)) # ['Everest', 'Liberty', 'Rocky', 'Rubble', 'Zuma']
+
+# newTuple = students + ("Skye", "Ryder")
+# print(newTuple) # ('Rocky', 'Rubble', 'Zuma', 'Liberty', 'Everest', 'Skye', 'Ryder')
 
 #----------------------------------------------------------------------------------
 
 #--------------------------------Dictionaries--------------------------------------
+
+# another important python data structure
+# dictionaries allow us to create key value pairs
+# curly braces is used in dictionaries {"key":"value"}
+# the key can be any immutable value such as a string, a number, or a tuple
+# the value can be anything we want
+# dictionary can contain multiple key value pairs
+
+cat1 = { "name":"Sam", "age":4,  }
+
+print(cat1["name"])
 
 #----------------------------------------------------------------------------------
 
