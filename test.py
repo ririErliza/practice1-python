@@ -864,9 +864,21 @@ def counter():
 increment = counter()
 
 print(increment()) # 2
+print(increment()) # 3
+print(increment()) # 4
+print(increment()) # 5
 #----------------------------------------------------------------------------------
 
 #--------------------------------Objects-------------------------------------------
+
+# Everything in python is an object
+# even values of basic prim of types like integers, strings, floats, lists, tuples, dictionaries
+
+banana = 8
+
+print(banana.real)
+print(banana.imag)
+print(banana.bit_lengst())
 
 #----------------------------------------------------------------------------------
 
