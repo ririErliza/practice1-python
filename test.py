@@ -757,34 +757,55 @@ students = ("Rocky", "Rubble", "Zuma", "Liberty", "Everest")
 # function let us create a set of instructions that we can run when needed
 # indentation matter. it can be 2 or 4 spaces. as long as it is indented the same exact amount
 
-def hello():
-    print("Hello!")
+# def hello():
+#     print("Hello!")
 
-hello() #Hello!
-hello() #Hello!
+# hello() #Hello!
+# hello() #Hello!
 
-def hi(name): # putting argument here
-    print("Hi! "+ name)
+# def hi(name): # putting argument here
+#     print("Hi! "+ name)
 
-hi("Diana") # Hi! Diana
-hi("Arissa") # Hi! Arissa
-# hi() # TypeError: hi() missing 1 required positional argument: 'name'  # because we didnt pass any name inside
+# hi("Diana") # Hi! Diana
+# hi("Arissa") # Hi! Arissa
+# # hi() # TypeError: hi() missing 1 required positional argument: 'name'  # because we didnt pass any name inside
 
-def yuhuu(name="the one who cant be name"): # putting an optional argument
-    print("Yo! " + name)
+# def yuhuu(name="the one who cant be name"): # putting an optional argument
+#     print("Yo! " + name)
 
-yuhuu("Diana") # Yo! Diana
-yuhuu("Arissa") # Yo! Arissa
-yuhuu() # Yo! the one who cant be name
+# yuhuu("Diana") # Yo! Diana
+# yuhuu("Arissa") # Yo! Arissa
+# yuhuu() # Yo! the one who cant be name
 
-def annyeong(name, age):
-    print("Annyeong! " + name + ", you are " + str(age) + "years old!")
+# def annyeong(name, age):
+#     print("Annyeong! " + name + ", you are " + str(age) + "years old!")
 
-annyeong("Beau",39) # Annyeong! Beau, you are 39years old!
+# annyeong("Beau",39) # Annyeong! Beau, you are 39years old!
 
 #----------------------------------------------------------------------------------
 
 #--------------------------------Variable Scope------------------------------------
+
+#----Global Variable----
+
+# age=8  # this variable declared globally
+
+# def test():
+#     print(age)
+
+# print(age)  # 8
+# test()      # 8 
+
+#----Local Variable----
+
+# def test():
+#     age= 9
+#     print(age)
+
+
+# test() # 9
+
+# print(age) # NameError: name 'age' is not defined
 
 #----------------------------------------------------------------------------------
 
