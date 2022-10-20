@@ -796,7 +796,9 @@ students = ("Rocky", "Rubble", "Zuma", "Liberty", "Everest")
 # print(age)  # 8
 # test()      # 8 
 
+
 #----Local Variable----
+# (only available inside the function)
 
 # def test():
 #     age= 9
@@ -811,10 +813,57 @@ students = ("Rocky", "Rubble", "Zuma", "Liberty", "Everest")
 
 #--------------------------------Nested Functions----------------------------------
 
+# a function defined inside a function is visible only iniside that function
+# this is useful to create utilities that are useful to create a function but not useful outside of it
+
+def talk(phrase): # we declare function talk and inside that function, we declare another function say
+    def say(word):
+        print(word)
+
+    words = phrase.split(' ')
+    for word in words:
+        say(word)
+
+talk('I am going to buy milk')
+# I
+# am
+# going
+# to
+# buy
+# milk
+
+def count():
+    count=0
+
+    def increment():
+        nonlocal count  # nonlocal. this allows us to access count variable that was declared outside increment() function but inside count() function
+        count += 1
+        print(count)
+    
+    increment()
+
+count() # 1
+
 #----------------------------------------------------------------------------------
 
 #--------------------------------Closures------------------------------------------
 
+# if we return a nested function from a function that nested function has access to 
+# the variables defined in that function even if that function is not active anymore
+
+def counter():
+    count1=1
+
+    def increment():
+        nonlocal count1 
+        count1 += 1
+        return count1
+    
+    return increment
+
+increment = counter()
+
+print(increment()) # 2
 #----------------------------------------------------------------------------------
 
 #--------------------------------Objects-------------------------------------------
