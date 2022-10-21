@@ -873,12 +873,19 @@ print(increment()) # 5
 
 # Everything in python is an object
 # even values of basic prim of types like integers, strings, floats, lists, tuples, dictionaries
+# objects have attributes and methods that can be accessed using dot syntax
 
 banana = 8
 
-print(banana.real)
-print(banana.imag)
-print(banana.bit_lengst())
+print(banana.real) # 8
+print(banana.imag) # 0
+print(banana.bit_length()) # 4 # bit length method return the number of bits necessary to represent this number in binary notation
+
+grapes = [1,2]
+grapes.append(3)
+grapes.pop()
+print(grapes) # [1, 2]
+print(id(grapes)) # 2503032173888
 
 #----------------------------------------------------------------------------------
 
