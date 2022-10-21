@@ -885,12 +885,91 @@ grapes = [1,2]
 grapes.append(3)
 grapes.pop()
 print(grapes) # [1, 2]
-print(id(grapes)) # 2503032173888
+print(id(grapes)) # 2503032173888 # the id global function provided by python lets you inspect the location in memory for a particular object
+
+# some objects are mutable and some are immutable
 
 #----------------------------------------------------------------------------------
 
 #--------------------------------Loops---------------------------------------------
 
+# while loop will repeat the block until the condition is evaluated as false
+kondisi = True
+while kondisi == True:
+    print("Hello while loop")
+    kondisi= False
+
+    # Hello while loop
+    #------done after the iteration meet kondisi=False----- 
+
+hitung=0
+while hitung<10:
+    print("The condition is True")
+    hitung+=1
+print("After the loop")
+
+#------will be orinted like below----
+
+# The condition is True
+# The condition is True
+# The condition is True
+# The condition is True
+# The condition is True
+# The condition is True
+# The condition is True
+# The condition is True
+# The condition is True
+# The condition is True
+# After the loop
+
+
+# For loop --> using for loop we can tell python to execute a block for a predetermined amount of times up front and without the need 
+# of a separate variable and conditional to check its value
+
+oranges = [1,2,3,4,5]
+
+for orange in oranges: # for each item in the list we're gonna print the item
+    print(orange)
+
+# 1
+# 2
+# 3
+# 4
+# 5
+
+# using range
+for item in range(5):
+    print(item)
+
+# 0
+# 1
+# 2
+# 3
+# 4
+
+print("-------------------------------")
+
+# enumerate
+apples = [1,2,3,4,5]
+for index, apple in enumerate(apples):
+    print(index, apple)
+
+# 0 1
+# 1 2
+# 2 3
+# 3 4
+# 4 5
+
+# (index and item are printed side by side)
+print("-------------------------------")
+
+members = ["Zuma", "Rocky", "Marshall"]
+for index, member in enumerate(members):
+    print(index, member)
+
+# 0 Zuma
+# 1 Rocky
+# 2 Marshall
 #----------------------------------------------------------------------------------
 
 #--------------------------------Break and Continue--------------------------------
