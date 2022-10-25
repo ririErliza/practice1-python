@@ -893,7 +893,7 @@ print(id(grapes)) # 2503032173888 # the id global function provided by python le
 
 #--------------------------------Loops---------------------------------------------
 
-# while loop will repeat the block until the condition is evaluated as false
+# while loop --> will repeat the block until the condition is evaluated as false
 kondisi = True
 while kondisi == True:
     print("Hello while loop")
@@ -925,6 +925,7 @@ print("After the loop")
 
 # For loop --> using for loop we can tell python to execute a block for a predetermined amount of times up front and without the need 
 # of a separate variable and conditional to check its value
+# it is commonly used to iterate item in a list
 
 oranges = [1,2,3,4,5]
 
@@ -961,6 +962,7 @@ for index, apple in enumerate(apples):
 # 4 5
 
 # (index and item are printed side by side)
+
 print("-------------------------------")
 
 members = ["Zuma", "Rocky", "Marshall"]
@@ -970,13 +972,60 @@ for index, member in enumerate(members):
 # 0 Zuma
 # 1 Rocky
 # 2 Marshall
-#----------------------------------------------------------------------------------
+
+print("-------------------------------")
+
 
 #--------------------------------Break and Continue--------------------------------
+
+# both while and for loops can be interrupted inside the block using either break or continue
+# continue --> stops the current iteration and tells python to execute the next one
+# break --> stops the loop altogether and goes on with the next instruction after the loop ends
+
+kiwis = [1,2,3,4]
+for kiwi in kiwis:
+    if kiwi == 2:
+        continue
+    print(kiwi)
+
+
+# 1
+# 3
+# 4
+
+
+print("-------------break------------------")
+
+for kiwi in kiwis:
+    if kiwi == 2:
+        break
+    print(kiwi)
+
+# 1
+
+print("-------------------------------")
 
 #----------------------------------------------------------------------------------
 
 #--------------------------------Classes-------------------------------------------
+
+#
+
+class Wolf:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+    def bark(self):
+        print("awooooo")
+
+roger = Wolf("Roger",8)
+
+print(type(roger)) # <class '__main__.Wolf'>
+print(roger.name) # Roger
+print(roger.age) # 8
+
+roger.bark() # awooooo
 
 #----------------------------------------------------------------------------------
 
