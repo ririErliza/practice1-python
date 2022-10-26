@@ -1082,6 +1082,8 @@ bark()
 
 # wooof woof 2!
 
+print("------------another module----------------")
+
 # There are a lot of modules available
 # Here are some of them
 # math for math utilities 
@@ -1097,14 +1099,31 @@ bark()
 # urllib to manage URLs
 
 
+# Math module
+
+import math
+print(math.sqrt(4)) # 2.0
+
+from math import sqrt
+print(sqrt(16)) # 4.0
+
+print("-------------------------------")
 
 #----------------------------------------------------------------------------------
 
 #--------------------------------Arguments from Command Line-----------------------
 
+# Accepting Arguments
+# $ python test.py --> type this at the terminal to run python (just another way other tahn pressing the run button)
+
 #----------------------------------------------------------------------------------
 
 #--------------------------------Lambda Functions----------------------------------
+
+lambda num : num*2
+
+multiply = lambda a,b : a*b
+print(multiply(2,4))  # 8
 
 #----------------------------------------------------------------------------------
 
