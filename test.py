@@ -1138,6 +1138,11 @@ print("-------------------------------")
 # python provides three useful global functions that we can use to work with collections
 # so this is map, filter, reduce
 
+
+
+
+
+# ------MAP-------
 numbers = [1,2,3]
 
 # double = lambda a : a*2
@@ -1147,6 +1152,24 @@ numbers = [1,2,3]
 result = map(lambda a : a*2, numbers) # the same as 2 lines above
 
 print(list(result)) # [2, 4, 6]
+
+print("-------------------------------")
+
+#-----FILTER-----
+
+numbers2 = [1,2,3,4,5,6]
+
+# def isEven(n):
+#     return n%2 == 0
+
+# result=filter(isEven,numbers2)
+
+result=filter(lambda n:n%2==0,numbers2)
+
+
+
+print(list(result)) #[2, 4, 6]
+
 
 #----------------------------------------------------------------------------------
 
