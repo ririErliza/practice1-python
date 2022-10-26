@@ -1196,9 +1196,9 @@ expenses2 = [
     ('Car Repair', 20)
 ]
 
-sum=reduce(lambda a,b:a[1]+b[1], expenses)
+sum=reduce(lambda a,b:a[1]+b[1], expenses2)
 
-print(sum)
+print(sum) # 50
 
 
 #----------------------------------------------------------------------------------
