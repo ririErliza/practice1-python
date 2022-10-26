@@ -1170,6 +1170,36 @@ result=filter(lambda n:n%2==0,numbers2)
 
 print(list(result)) #[2, 4, 6]
 
+print("-------------------------------")
+
+#-----REDUCE-----
+
+# long way, without using reduce
+
+expenses = [
+    ('Dinner', 80),
+    ('Car Repair', 120)
+]
+
+sum=0
+for expense in expenses:
+    sum+=expense[1]
+
+print(sum) # 200
+
+print("-------------------------------")
+
+from functools import reduce
+
+expenses2 = [
+    ('Dinner', 30),
+    ('Car Repair', 20)
+]
+
+sum=reduce(lambda a,b:a[1]+b[1], expenses)
+
+print(sum)
+
 
 #----------------------------------------------------------------------------------
 
