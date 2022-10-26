@@ -1056,6 +1056,26 @@ print("-------------------------------")
 
 #--------------------------------Modules-------------------------------------------
 
+# every python file is a module, we can import a module from other files and that's the base of any program
+# of moderate complexity as it promotes a sensible organization and code reuse so it's basically how we can 
+# create a software that has multiple python programs in the same piecce of software
+# in the typical python program, one file acts as the entry point and the other files are modules and exposed functions
+# that we can call from other files
+
+from dog import bark
+bark()
+
+# wooof!
+
+print("-------------------------------")
+
+from lib import dog2
+
+dog2.bark()
+
+# wooof woof 2!
+
+print("-------------------------------")
 #----------------------------------------------------------------------------------
 
 #--------------------------------Arguments from Command Line-----------------------
