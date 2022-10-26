@@ -816,236 +816,236 @@ students = ("Rocky", "Rubble", "Zuma", "Liberty", "Everest")
 # a function defined inside a function is visible only iniside that function
 # this is useful to create utilities that are useful to create a function but not useful outside of it
 
-def talk(phrase): # we declare function talk and inside that function, we declare another function say
-    def say(word):
-        print(word)
+# def talk(phrase): # we declare function talk and inside that function, we declare another function say
+#     def say(word):
+#         print(word)
 
-    words = phrase.split(' ')
-    for word in words:
-        say(word)
+#     words = phrase.split(' ')
+#     for word in words:
+#         say(word)
 
-talk('I am going to buy milk')
-# I
-# am
-# going
-# to
-# buy
-# milk
+# talk('I am going to buy milk')
+# # I
+# # am
+# # going
+# # to
+# # buy
+# # milk
 
-def count():
-    count=0
+# def count():
+#     count=0
 
-    def increment():
-        nonlocal count  # nonlocal. this allows us to access count variable that was declared outside increment() function but inside count() function
-        count += 1
-        print(count)
+#     def increment():
+#         nonlocal count  # nonlocal. this allows us to access count variable that was declared outside increment() function but inside count() function
+#         count += 1
+#         print(count)
     
-    increment()
+#     increment()
 
-count() # 1
+# count() # 1
 
-#----------------------------------------------------------------------------------
+# #----------------------------------------------------------------------------------
 
-#--------------------------------Closures------------------------------------------
+# #--------------------------------Closures------------------------------------------
 
-# if we return a nested function from a function that nested function has access to 
-# the variables defined in that function even if that function is not active anymore
+# # if we return a nested function from a function that nested function has access to 
+# # the variables defined in that function even if that function is not active anymore
 
-def counter():
-    count1=1
+# def counter():
+#     count1=1
 
-    def increment():
-        nonlocal count1 
-        count1 += 1
-        return count1
+#     def increment():
+#         nonlocal count1 
+#         count1 += 1
+#         return count1
     
-    return increment
+#     return increment
 
-increment = counter()
+# increment = counter()
 
-print(increment()) # 2
-print(increment()) # 3
-print(increment()) # 4
-print(increment()) # 5
-#----------------------------------------------------------------------------------
+# print(increment()) # 2
+# print(increment()) # 3
+# print(increment()) # 4
+# print(increment()) # 5
+# #----------------------------------------------------------------------------------
 
-#--------------------------------Objects-------------------------------------------
+# #--------------------------------Objects-------------------------------------------
 
-# Everything in python is an object
-# even values of basic prim of types like integers, strings, floats, lists, tuples, dictionaries
-# objects have attributes and methods that can be accessed using dot syntax
+# # Everything in python is an object
+# # even values of basic prim of types like integers, strings, floats, lists, tuples, dictionaries
+# # objects have attributes and methods that can be accessed using dot syntax
 
-banana = 8
+# banana = 8
 
-print(banana.real) # 8
-print(banana.imag) # 0
-print(banana.bit_length()) # 4 # bit length method return the number of bits necessary to represent this number in binary notation
+# print(banana.real) # 8
+# print(banana.imag) # 0
+# print(banana.bit_length()) # 4 # bit length method return the number of bits necessary to represent this number in binary notation
 
-grapes = [1,2]
-grapes.append(3)
-grapes.pop()
-print(grapes) # [1, 2]
-print(id(grapes)) # 2503032173888 # the id global function provided by python lets you inspect the location in memory for a particular object
+# grapes = [1,2]
+# grapes.append(3)
+# grapes.pop()
+# print(grapes) # [1, 2]
+# print(id(grapes)) # 2503032173888 # the id global function provided by python lets you inspect the location in memory for a particular object
 
-# some objects are mutable and some are immutable
+# # some objects are mutable and some are immutable
 
-#----------------------------------------------------------------------------------
+# #----------------------------------------------------------------------------------
 
-#--------------------------------Loops---------------------------------------------
+# #--------------------------------Loops---------------------------------------------
 
-# while loop --> will repeat the block until the condition is evaluated as false
-kondisi = True
-while kondisi == True:
-    print("Hello while loop")
-    kondisi= False
+# # while loop --> will repeat the block until the condition is evaluated as false
+# kondisi = True
+# while kondisi == True:
+#     print("Hello while loop")
+#     kondisi= False
 
-    # Hello while loop
-    #------done after the iteration meet kondisi=False----- 
+#     # Hello while loop
+#     #------done after the iteration meet kondisi=False----- 
 
-hitung=0
-while hitung<10:
-    print("The condition is True")
-    hitung+=1
-print("After the loop")
+# hitung=0
+# while hitung<10:
+#     print("The condition is True")
+#     hitung+=1
+# print("After the loop")
 
-#------will be orinted like below----
+# #------will be orinted like below----
 
-# The condition is True
-# The condition is True
-# The condition is True
-# The condition is True
-# The condition is True
-# The condition is True
-# The condition is True
-# The condition is True
-# The condition is True
-# The condition is True
-# After the loop
-
-
-# For loop --> using for loop we can tell python to execute a block for a predetermined amount of times up front and without the need 
-# of a separate variable and conditional to check its value
-# it is commonly used to iterate item in a list
-
-oranges = [1,2,3,4,5]
-
-for orange in oranges: # for each item in the list we're gonna print the item
-    print(orange)
-
-# 1
-# 2
-# 3
-# 4
-# 5
-
-# using range
-for item in range(5):
-    print(item)
-
-# 0
-# 1
-# 2
-# 3
-# 4
-
-print("-------------------------------")
-
-# enumerate
-apples = [1,2,3,4,5]
-for index, apple in enumerate(apples):
-    print(index, apple)
-
-# 0 1
-# 1 2
-# 2 3
-# 3 4
-# 4 5
-
-# (index and item are printed side by side)
-
-print("-------------------------------")
-
-members = ["Zuma", "Rocky", "Marshall"]
-for index, member in enumerate(members):
-    print(index, member)
-
-# 0 Zuma
-# 1 Rocky
-# 2 Marshall
-
-print("-------------------------------")
+# # The condition is True
+# # The condition is True
+# # The condition is True
+# # The condition is True
+# # The condition is True
+# # The condition is True
+# # The condition is True
+# # The condition is True
+# # The condition is True
+# # The condition is True
+# # After the loop
 
 
-#--------------------------------Break and Continue--------------------------------
+# # For loop --> using for loop we can tell python to execute a block for a predetermined amount of times up front and without the need 
+# # of a separate variable and conditional to check its value
+# # it is commonly used to iterate item in a list
 
-# both while and for loops can be interrupted inside the block using either break or continue
-# continue --> stops the current iteration and tells python to execute the next one
-# break --> stops the loop altogether and goes on with the next instruction after the loop ends
+# oranges = [1,2,3,4,5]
 
-kiwis = [1,2,3,4]
-for kiwi in kiwis:
-    if kiwi == 2:
-        continue
-    print(kiwi)
+# for orange in oranges: # for each item in the list we're gonna print the item
+#     print(orange)
+
+# # 1
+# # 2
+# # 3
+# # 4
+# # 5
+
+# # using range
+# for item in range(5):
+#     print(item)
+
+# # 0
+# # 1
+# # 2
+# # 3
+# # 4
+
+# print("-------------------------------")
+
+# # enumerate
+# apples = [1,2,3,4,5]
+# for index, apple in enumerate(apples):
+#     print(index, apple)
+
+# # 0 1
+# # 1 2
+# # 2 3
+# # 3 4
+# # 4 5
+
+# # (index and item are printed side by side)
+
+# print("-------------------------------")
+
+# members = ["Zuma", "Rocky", "Marshall"]
+# for index, member in enumerate(members):
+#     print(index, member)
+
+# # 0 Zuma
+# # 1 Rocky
+# # 2 Marshall
+
+# print("-------------------------------")
 
 
-# 1
-# 3
-# 4
+# #--------------------------------Break and Continue--------------------------------
+
+# # both while and for loops can be interrupted inside the block using either break or continue
+# # continue --> stops the current iteration and tells python to execute the next one
+# # break --> stops the loop altogether and goes on with the next instruction after the loop ends
+
+# kiwis = [1,2,3,4]
+# for kiwi in kiwis:
+#     if kiwi == 2:
+#         continue
+#     print(kiwi)
 
 
-print("-------------break------------------")
+# # 1
+# # 3
+# # 4
 
-for kiwi in kiwis:
-    if kiwi == 2:
-        break
-    print(kiwi)
 
-# 1
+# print("-------------break------------------")
 
-print("-------------------------------")
+# for kiwi in kiwis:
+#     if kiwi == 2:
+#         break
+#     print(kiwi)
 
-#----------------------------------------------------------------------------------
+# # 1
 
-#--------------------------------Classes-------------------------------------------
+# print("-------------------------------")
 
-#
+# #----------------------------------------------------------------------------------
 
-class Wolf:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+# #--------------------------------Classes-------------------------------------------
 
-    def bark(self):
-        print("awooooo")
+# #
 
-roger = Wolf("Roger",8)
+# class Wolf:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
 
-print(type(roger)) # <class '__main__.Wolf'>
-print(roger.name) # Roger
-print(roger.age) # 8
+#     def bark(self):
+#         print("awooooo")
 
-roger.bark() # awooooo
+# roger = Wolf("Roger",8)
 
-print("-------------------------------")
+# print(type(roger)) # <class '__main__.Wolf'>
+# print(roger.name) # Roger
+# print(roger.age) # 8
 
-class Animal:
-    def walk(self):
-        print("Walking....")
+# roger.bark() # awooooo
 
-class Tiger(Animal):
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+# print("-------------------------------")
 
-    def bark(self):
-        print("haooooom")
+# class Animal:
+#     def walk(self):
+#         print("Walking....")
 
-beau = Tiger("Beau", 7)
+# class Tiger(Animal):
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
 
-print(beau.name)
-beau.bark()
-beau.walk() #Beau inherit this method from Animal class 
+#     def bark(self):
+#         print("haooooom")
+
+# beau = Tiger("Beau", 7)
+
+# print(beau.name)
+# beau.bark()
+# beau.walk() #Beau inherit this method from Animal class 
 
 # Beau
 # haooooom
@@ -1114,20 +1114,39 @@ print("-------------------------------")
 #--------------------------------Arguments from Command Line-----------------------
 
 # Accepting Arguments
-# $ python test.py --> type this at the terminal to run python (just another way other tahn pressing the run button)
+# $ python test.py --> type this at the terminal to run python (just another way other than pressing the run button)
 
 #----------------------------------------------------------------------------------
 
 #--------------------------------Lambda Functions----------------------------------
 
 lambda num : num*2
+#----------------------
 
 multiply = lambda a,b : a*b
 print(multiply(2,4))  # 8
 
+# the utility of lambda function comes when combined with other python functionality
+# for example in combination with map, filter, and reduce 
+
+print("-------------------------------")
+
 #----------------------------------------------------------------------------------
 
 #--------------------------------Map, Filter, Reduce-------------------------------
+
+# python provides three useful global functions that we can use to work with collections
+# so this is map, filter, reduce
+
+numbers = [1,2,3]
+
+# double = lambda a : a*2
+
+# result = map(double, numbers)
+
+result = map(lambda a : a*2, numbers) # the same as 2 lines above
+
+print(list(result)) # [2, 4, 6]
 
 #----------------------------------------------------------------------------------
 
