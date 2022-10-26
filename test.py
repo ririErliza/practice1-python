@@ -1075,7 +1075,29 @@ dog2.bark()
 
 # wooof woof 2!
 
-print("-------------------------------")
+print("------------another way-------------------")
+
+from lib.dog2 import bark
+bark()
+
+# wooof woof 2!
+
+# There are a lot of modules available
+# Here are some of them
+# math for math utilities 
+# re for regular expression 
+# json to work with json
+# datetime to work with dates
+# sqlite3 to use SQLite
+# os for Operating System utilities
+# random for random number generation
+# statistics for statistics utilities
+# requests to perform HTTP Network requests
+# http to create HTTP servers
+# urllib to manage URLs
+
+
+
 #----------------------------------------------------------------------------------
 
 #--------------------------------Arguments from Command Line-----------------------
