@@ -1214,14 +1214,31 @@ print(sum) # 50
 # 5! = 5*4*3*2*1=120
 
 def factorial(n):
-    if n==1:return 1
-    return n*factorial(n-1)
+    if n==1:return 1            # base case
+    return n*factorial(n-1)     # recursive case
 
 print(factorial(3)) # 6
+
+# we always need the base case so the recursion can stop
 
 #----------------------------------------------------------------------------------
 
 #--------------------------------Decorators----------------------------------------
+
+# decorators in python are a way to change, enhance, or  alter in anyway how a function works
+# decorators are defined with the at symbol followed by the decorator name just before the function definition
+
+def logtime(func):
+    def wrapper():
+        #do something before
+        val= func()
+        # do something after
+        return val
+    return wrapper
+
+@logtime
+def hello():
+    print("hello")
 
 #----------------------------------------------------------------------------------
 
