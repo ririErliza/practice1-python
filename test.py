@@ -1244,13 +1244,48 @@ def hello():
 
 hello()
 
-# before
-# hello
-# after
+"""
+before
+hello
+after
+
+""" 
 
 #----------------------------------------------------------------------------------
 
 #--------------------------------Docstrings----------------------------------------
+
+# work similar like comment, to tell what this code is going to do (giving information)
+# writing docstring: put 3 quotation marks before and after strings
+
+def increment(n):
+    """Increment a number"""
+    return n+1
+
+print(increment(3)) # 4
+
+print(help(increment))
+"""
+Help on function increment in module __main__:
+
+increment(n)
+    Increment a number
+
+None
+"""
+
+class Dog:
+    """A class representing a dog"""
+    def __init__(self, name, age):
+        """Initialize a new dog"""
+        self.name=name
+        self.age=age
+
+    def bark(self):
+        """Let the dog bark"""
+        print("WOF!")
+
+print(help(Dog))
 
 #----------------------------------------------------------------------------------
 
