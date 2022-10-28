@@ -1274,6 +1274,8 @@ increment(n)
 None
 """
 
+#------------------------------------------------------------
+
 class Dog:
     """A class representing a dog"""
     def __init__(self, name, age):
@@ -1286,6 +1288,33 @@ class Dog:
         print("WOF!")
 
 print(help(Dog))
+"""
+Help on class Dog in module __main__:
+
+class Dog(builtins.object)
+ |  Dog(name, age)
+ |
+ |  A class representing a dog
+ |
+ |  Methods defined here:
+ |
+ |  __init__(self, name, age)
+ |      Initialize a new dog
+ |
+ |  bark(self)
+ |      Let the dog bark
+ |
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |
+ |  __dict__
+ |      dictionary for instance variables (if defined)
+ |
+ |  __weakref__
+ |      list of weak references to the object (if defined)
+
+None
+"""
 
 #----------------------------------------------------------------------------------
 
