@@ -1029,6 +1029,8 @@ students = ("Rocky", "Rubble", "Zuma", "Liberty", "Everest")
 
 # print("-------------------------------")
 
+
+#---------INHERITANCE---------------
 # class Animal:
 #     def walk(self):
 #         print("Walking....")
@@ -1139,9 +1141,6 @@ print("-------------------------------")
 # so this is map, filter, reduce
 
 
-
-
-
 # ------MAP-------
 numbers = [1,2,3]
 
@@ -1189,6 +1188,8 @@ print(sum) # 200
 
 print("-------------------------------")
 
+# using reduce
+
 from functools import reduce
 
 expenses2 = [
@@ -1204,6 +1205,19 @@ print(sum) # 50
 #----------------------------------------------------------------------------------
 
 #--------------------------------Recursion-----------------------------------------
+
+# A function in python can call itself, that's what recursion is
+# It can be useful for e.g. factorial calculation
+
+# 3! = 3*2*1=6
+# 4! = 4*3*2*1=24
+# 5! = 5*4*3*2*1=120
+
+def factorial(n):
+    if n==1:return 1
+    return n*factorial(n-1)
+
+print(factorial(3)) # 6
 
 #----------------------------------------------------------------------------------
 
